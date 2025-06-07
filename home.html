@@ -1,26 +1,31 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start | AfD-Fraktion Stadtrat Pirmasens</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 <body>
-    <div id="header"></div>
 
-    <main>
-        <h2>Willkommen!</h2>
-        <p>Dies ist die Startseite.</p>
-    </main>
+<div id="header"></div>
 
-    <div id="footer"></div>
+<main>
+    <h2>Willkommen!</h2>
+    <p>Dies ist die Startseite.</p>
+</main>
 
-    <script>
-        // Header laden
-        fetch('header.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('header').innerHTML = data;
-            });
+<div id="footer"></div>
 
-        // Footer laden
-        fetch('footer.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('footer').innerHTML = data;
-            });
-    </script>
+<script>
+    fetch('header.html')
+        .then(response => response.text())
+        .then(html => document.getElementById('header').innerHTML = html);
+
+    fetch('footer.html')
+        .then(response => response.text())
+        .then(html => document.getElementById('footer').innerHTML = html);
+</script>
+
 </body>
+</html>
