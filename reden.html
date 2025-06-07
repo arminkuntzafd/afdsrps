@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AfD-Fraktion im Stadtrat Pirmasens - Offizielle Website">
+    <title>AfD-Fraktion Stadtrat Pirmasens - Reden</title>
+    <!-- Link zur CSS-Datei -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Der Container, in den der Header und Footer eingefügt werden -->
+<div id="header-footer-container"></div>
+
+<main>
+    <section>
+        <h2>Unsere Reden</h2>
+        <p>Hier finden Sie die aktuellen Reden der AfD-Fraktion im Stadtrat Pirmasens.</p>
+    </section>
+
+    <section>
+        <h3>Haushaltsrede 2025</h3>
+        <p>Lesen Sie die vollständige Haushaltsrede der AfD-Fraktion im Stadtrat Pirmasens:</p>
+        <div class="pdf-container">
+            <iframe src="https://github.com/arminkuntzafd/afdsrps/blob/main/PSHH25.pdf" title="Haushaltsrede AfD Stadtrat Pirmasens"></iframe>
+        </div>
+
+        <!-- Download-Link für die Rede -->
+        <p>Oder <a href="https://github.com/arminkuntzafd/afdsrps/blob/main/PSHH25.pdf" target="_blank">laden Sie die Rede als PDF herunter</a>.</p>
+    </section>
+</main>
+
+<script>
+    // Header und Footer über die Fetch API laden
+    fetch("header.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("header-footer-container").innerHTML = data;
+        })
+        .catch(error => console.error('Fehler beim Laden von header.html:', error));
+</script>
+
+</body>
+</html>
