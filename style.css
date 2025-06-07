@@ -13,10 +13,17 @@ header {
     color: white;
     padding: 20px;
     text-align: center;
+    margin-bottom: 20px; /* Falls der Header höher als nötig ist, sicherstellen, dass er nicht zu groß wird */
 }
 
 h1 {
     margin: 0;
+    font-size: 2.5rem; /* Größe für den Titel */
+}
+
+header p {
+    font-size: 1.2rem;
+    margin: 10px 0;
 }
 
 nav {
@@ -40,4 +47,7 @@ footer {
     color: white;
     text-align: center;
     padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
