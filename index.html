@@ -1,33 +1,50 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="AfD-Fraktion im Stadtrat Pirmasens - Offizielle Website">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="AfD-Fraktion im Stadtrat Pirmasens - Offizielle Website" />
     <title>AfD-Fraktion Stadtrat Pirmasens</title>
-    <link rel="stylesheet" href="style.css"> <!-- Link zur externen CSS-Datei -->
+
+    <!-- Externe CSS-Datei -->
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<!-- Hier wird der Header mit Footer eingebunden -->
-<div id="header-footer-container"></div>
+    <!-- HEADER -->
+    <header>
+        <h1>AfD-Fraktion im Stadtrat Pirmasens</h1>
+        <p>Wir setzen uns für Ihre Interessen ein!</p>
+    </header>
 
-<main>
-    <section>
-        <h2>Willkommen auf der offiziellen Website der AfD-Fraktion im Stadtrat Pirmasens!</h2>
-        <p>Die AfD-Fraktion im Stadtrat Pirmasens setzt sich mit Leidenschaft und Engagement für die Interessen der Bürger ein. Auf dieser Seite erfahren Sie mehr über unsere politischen Ziele, unser Team und wie Sie mit uns in Kontakt treten können.</p>
-    </section>
-</main>
+    <!-- NAVIGATION wird automatisch geladen -->
+    <div id="nav-container"></div>
 
-<script>
-    // Der Header und Footer werden hier per JavaScript geladen
-    fetch("header.html")
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById("header-footer-container").innerHTML = data;
-        })
-        .catch(error => console.error('Error loading header and footer:', error));
-</script>
+    <!-- HAUPTINHALT -->
+    <main>
+        <section>
+            <h2>Willkommen auf der offiziellen Website der AfD-Fraktion im Stadtrat Pirmasens!</h2>
+            <p>
+                Die AfD-Fraktion im Stadtrat Pirmasens setzt sich mit Leidenschaft und Engagement für die Interessen der Bürger ein.
+                Auf dieser Seite erfahren Sie mehr über unsere politischen Ziele, unser Team und wie Sie mit uns in Kontakt treten können.
+            </p>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2025 AfD-Fraktion Stadtrat Pirmasens</p>
+    </footer>
+
+    <!-- JAVASCRIPT zum Laden der Navigation -->
+    <script>
+        fetch('nav.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('nav-container').innerHTML = data;
+            })
+            .catch(error => console.error('Fehler beim Laden der Navigation:', error));
+    </script>
 
 </body>
 </html>
