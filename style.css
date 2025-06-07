@@ -42,6 +42,35 @@ nav a {
 nav a:hover {
     text-decoration: underline;
 }
+/* Dropdown-Menü */
+nav .dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+nav .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #444;
+  min-width: 160px;
+  z-index: 1000;
+  border-radius: 4px;
+}
+
+nav .dropdown-content a {
+  color: white;
+  padding: 10px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+nav .dropdown-content a:hover {
+  background-color: #666;
+}
+
+nav .dropdown:hover .dropdown-content {
+  display: block;
+}
 
 footer {
     background-color: #002147;
