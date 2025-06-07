@@ -3,46 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="AfD-Fraktion im Stadtrat Pirmasens - Offizielle Website">
-    <title>AfD-Fraktion Stadtrat Pirmasens - Reden</title>
-    <!-- Link zur CSS-Datei -->
+    <meta name="description" content="AfD-Fraktion im Stadtrat Pirmasens - Rede">
+    <title>Reden – AfD-Fraktion Stadtrat Pirmasens</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- Der Container, in den der Header und Footer eingefügt werden -->
-<div id="header-footer-container"></div>
+<!-- Header einfügen -->
+<?php include 'header.html'; ?>
 
 <main>
-    <section>
-        <h2>Unsere Reden</h2>
-        <p>Hier finden Sie die aktuellen Reden der AfD-Fraktion im Stadtrat Pirmasens.</p>
-    </section>
+    <section id="reden">
+        <h2>Haushaltsrede 2025</h2>
+        <p>Lesen Sie hier die vollständige Haushaltsrede unserer Fraktion im Stadtrat Pirmasens:</p>
 
-    <section>
-        <h3>Haushaltsrede 2025</h3>
-        <p>Lesen Sie die vollständige Haushaltsrede der AfD-Fraktion im Stadtrat Pirmasens:</p>
-        <div class="pdf-container">
-            <iframe src="PSHH25.pdf" title="Haushaltsrede AfD Stadtrat Pirmasens"></iframe>
-        </div>
+        <!-- PDF einbetten -->
+        <iframe src="PSHH25.pdf" width="100%" height="900px" style="border: none;"></iframe>
 
-        <!-- Download-Link für die Rede -->
-        <p>Oder <a href="PSHH25.pdf" target="_blank"
-        height="800"
-        width="100%"
-        >laden Sie die Rede als PDF herunter</a>.</p>
+        <!-- Optional: Download-Link -->
+        <p><a href="PSHH25.pdf" download>PDF herunterladen</a></p>
     </section>
 </main>
 
-<script>
-    // Header und Footer über die Fetch API laden
-    fetch("header.html")
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById("header-footer-container").innerHTML = data;
-        })
-        .catch(error => console.error('Fehler beim Laden von header.html:', error));
-</script>
+<!-- Footer -->
+<?php include 'footer.html'; ?>
 
 </body>
 </html>
