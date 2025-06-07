@@ -50,6 +50,12 @@
             bottom: 0;
             width: 100%;
         }
+        iframe {
+            width: 100%;
+            height: 600px;
+            border: none;
+            border-radius: 8px;
+        }
     </style>
 </head>
 <body>
@@ -64,6 +70,7 @@
     <a href="#themen">Themen</a>
     <a href="#team">Unser Team</a>
     <a href="#kontakt">Kontakt</a>
+    <a href="#termine">Termine</a>  <!-- Neuer Menüpunkt "Termine" -->
 </nav>
 
 <section id="home">
@@ -95,6 +102,13 @@
     <h2>Kontakt</h2>
     <p>Haben Sie Fragen oder Anregungen? Wir freuen uns auf Ihre Nachricht!</p>
     <p>Email: <a href="mailto:kontakt@afd-pirmasens.de">kontakt@afd-pirmasens.de</a></p>
+</section>
+
+<section id="termine">
+    <h2>Termine</h2>
+    <p>Hier finden Sie den aktuellen Kalender mit den Terminen der AfD-Fraktion im Stadtrat Pirmasens:</p>
+    <!-- Hier wird der Tockify-Kalender eingebettet -->
+    <iframe src="https://tockify.com/e/afdstadtratps/monthly" title="AfD Stadtrat Pirmasens Termine"></iframe>
 </section>
 
 <footer>
