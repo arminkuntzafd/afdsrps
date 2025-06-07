@@ -1,35 +1,26 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="AfD-Fraktion im Stadtrat Pirmasens - Offizielle Website">
-    <title>Start | AfD-Fraktion Stadtrat Pirmasens</title>
-</head>
 <body>
+    <div id="header"></div>
 
-<header>
-    <h1>AfD-Fraktion im Stadtrat Pirmasens</h1>
-    <p>Wir setzen uns für Ihre Interessen ein!</p>
-</header>
+    <main>
+        <h2>Willkommen!</h2>
+        <p>Dies ist die Startseite.</p>
+    </main>
 
-<nav>
-    <a href="index.html">Start</a>
-    <a href="themen.html">Themen</a>
-    <a href="team.html">Unser Team</a>
-    <a href="kontakt.html">Kontakt</a>
-    <a href="termine.html">Termine</a>
-    <a href="reden.html">Reden</a>
-</nav>
+    <div id="footer"></div>
 
-<section>
-    <h2>Willkommen auf der offiziellen Website der AfD-Fraktion im Stadtrat Pirmasens!</h2>
-    <p>Die AfD-Fraktion im Stadtrat Pirmasens setzt sich mit Leidenschaft und Engagement für die Interessen der Bürger ein. Auf dieser Seite erfahren Sie mehr über unsere politischen Ziele, unser Team und wie Sie mit uns in Kontakt treten können.</p>
-</section>
+    <script>
+        // Header laden
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            });
 
-<footer>
-    <p>&copy; 2025 AfD-Fraktion Stadtrat Pirmasens</p>
-</footer>
-
+        // Footer laden
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            });
+    </script>
 </body>
-</html>
