@@ -10,7 +10,7 @@
 <body>
 
 <!-- Header einbinden -->
-<div id="header"></div>
+<iframe src="header.html" id="header-iframe" style="width: 100%; height: 200px; border: none;"></iframe>
 
 <!-- Hauptinhalt -->
 <main>
@@ -21,19 +21,7 @@
 </main>
 
 <!-- Footer einbinden -->
-<div id="footer"></div>
-
-<!-- Header und Footer per JavaScript laden -->
-<script>
-    // Header und Footer laden
-    fetch('header.html')
-        .then(response => response.text())
-        .then(html => document.getElementById('header').innerHTML = html);
-
-    fetch('footer.html')
-        .then(response => response.text())
-        .then(html => document.getElementById('footer').innerHTML = html);
-</script>
+<iframe src="footer.html" id="footer-iframe" style="width: 100%; height: 50px; border: none;"></iframe>
 
 </body>
 </html>
