@@ -56,6 +56,15 @@
             border: none;
             border-radius: 8px;
         }
+        .pdf-container {
+            width: 100%;
+            height: 600px;
+            overflow: hidden;
+        }
+        .pdf-container iframe {
+            width: 100%;
+            height: 100%;
+        }
     </style>
 </head>
 <body>
@@ -70,7 +79,8 @@
     <a href="#themen">Themen</a>
     <a href="#team">Unser Team</a>
     <a href="#kontakt">Kontakt</a>
-    <a href="#termine">Termine</a>  <!-- Neuer Menüpunkt "Termine" -->
+    <a href="#termine">Termine</a>
+    <a href="#reden">Reden</a>  <!-- Neuer Menüpunkt "Reden" -->
 </nav>
 
 <section id="home">
@@ -108,7 +118,18 @@
     <h2>Termine</h2>
     <p>Hier finden Sie den aktuellen Kalender mit den Terminen der AfD-Fraktion im Stadtrat Pirmasens:</p>
     <!-- Hier wird der Tockify-Kalender eingebettet -->
-    <iframe src="https://tockify.com/afdkreistagswp/monthly" title="AfD Stadtrat Pirmasens Termine"></iframe>
+    <iframe src="https://tockify.com/e/afdstadtratps/monthly" title="AfD Stadtrat Pirmasens Termine"></iframe>
+</section>
+
+<section id="reden">
+    <h2>Reden</h2>
+    <p>Lesen Sie die aktuelle Rede der AfD-Fraktion im Stadtrat Pirmasens:</p>
+    <!-- Hier wird der PDF eingebettet -->
+    <div class="pdf-container">
+        <iframe src="https://assets.nicepagecdn.com/b4a213be/6515757/files/PSHH25.pdf" title="AfD Rede im Stadtrat Pirmasens"></iframe>
+    </div>
+    <!-- Alternativ kann der PDF auch als Download-Link angeboten werden -->
+    <p>Oder <a href="https://assets.nicepagecdn.com/b4a213be/6515757/files/PSHH25.pdf" target="_blank">laden Sie die Rede als PDF herunter</a>.</p>
 </section>
 
 <footer>
