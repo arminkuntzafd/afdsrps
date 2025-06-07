@@ -1,0 +1,32 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Trigger den Workflow, wenn auf den 'main' Branch gepusht wird
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest  # Wir verwenden eine Ubuntu-VM für den Workflow
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2  # Checkout dein Repository, damit die Action auf die Dateien zugreifen kann
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'  # Falls du JavaScript oder Build-Tools brauchst, wie z.B. npm oder yarn
+
+    - name: Install dependencies
+      run: npm install  # Falls du ein Node.js-Projekt hast, sonst kannst du diesen Schritt weglassen
+
+    - name: Build your project
+      run: npm run build  # Dieser Schritt wird verwendet, wenn du eine Build-Option hast, z. B. mit React oder Vue. Falls du dies nicht benötigst, kannst du ihn überspringen.
+
+    - name: Deploy to GitHub Pages
+      uses: JamesIves/github-pages-deploy-action@v4.1.1  # Eine Action, die das Deployment auf GitHub Pages übernimmt
+      with:
+        branch: gh-pages  # Ziel-Branch für das GitHub Pages Deployment
+        folder: ./public  # Ordner, der das gebaute Projekt enthält, meistens "public" oder "dist"
+        token: ${{ secrets.GITHUB_TOKEN }}  # Token für das Authentifizieren des Deployments
