@@ -1,31 +1,26 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Haushaltsrede 25</title>
-    <link rel="stylesheet" href="style.css" /> <!-- Stylesheet einbinden -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AfD-Fraktion im Stadtrat Pirmasens - Haushaltsrede 2025">
+    <title>Haushaltsrede 2025</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <!-- HEADER + NAV wird über JS oder manuell eingebunden -->
-    <div id="nav-container"></div>
-    <script>
-        fetch('nav.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('nav-container').innerHTML = data;
-            });
-    </script>
-
+    <!-- Header und Nav werden eingebunden -->
+    <!-- Hier wird header.html und nav.html mit JavaScript oder serverseitig eingebunden -->
+    
     <main>
-                <!-- Hier wird die PDF der Rede eingebunden -->
-        <iframe src="PSHH25.pdf" width="100%" height="800px" title="Haushaltsrede 2025"></iframe>
+        <section id="haushaltsrede">
+            <h2>Haushaltsrede 2025</h2>
+            <iframe src="redehh25.html" width="100%" height="800px"></iframe>
+        </section>
     </main>
-
+    
+    <!-- Footer -->
     <footer>
         <p>&copy; 2025 AfD-Fraktion Stadtrat Pirmasens</p>
     </footer>
-
 </body>
 </html>
