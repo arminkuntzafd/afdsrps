@@ -9,7 +9,7 @@ header {
     left: 0;
     width: 100%;
     z-index: 1000;  /* Sicherstellen, dass der Header immer oben bleibt */
-    margin: 0;  /* Verhindert mögliche Ränder */
+    margin: 0;
 }
 
 /* Entferne jegliche Abstände (Margin und Padding) */
@@ -28,8 +28,7 @@ nav {
     left: 0;
     width: 100%;
     z-index: 999;  /* Sicherstellen, dass das Menü unter dem Header bleibt */
-    margin: 0;  /* Entfernt Ränder und beseitigt die Lücke */
-    padding-top: 0;  /* Kein zusätzliches Padding oben */
+    margin: 0;
 }
 
 /* Nav-Links */
@@ -53,10 +52,10 @@ nav a:hover {
     display: none;
     position: absolute;
     background-color: #444;
-    min-width: 160px;  /* Mindestbreite des Dropdowns */
+    min-width: 160px;
     z-index: 1;
-    width: auto;  /* Die Breite passt sich automatisch an den Inhalt an */
-    white-space: nowrap;  /* Verhindert Umbruch des Textes */
+    width: auto;
+    white-space: nowrap;
     padding: 5px 10px;
 }
 
@@ -66,7 +65,7 @@ nav a:hover {
     display: block;
     text-align: left;
     text-decoration: none;
-    white-space: nowrap;  /* Verhindert Umbruch des Textes */
+    white-space: nowrap;
 }
 
 .dropdown-content a:hover {
@@ -75,6 +74,17 @@ nav a:hover {
 
 .dropdown:hover .dropdown-content {
     display: block;
+}
+
+/* Abstand für den Content */
+body {
+    margin: 0;
+    padding-top: 120px;  /* Startet den Content direkt unter dem Nav */
+}
+
+/* Sicherstellen, dass der Inhalt nicht von Header und Nav überlappt wird */
+main {
+    padding-top: 20px;  /* Padding für den Contentbereich */
 }
 
 /* Footer */
@@ -86,10 +96,4 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
-}
-
-/* Abstand nach oben für den Content */
-body {
-    margin-top: 140px;  /* Damit der Inhalt nicht unter dem Header/Nav versteckt wird */
-    padding-top: 60px;  /* Damit der Content nach dem Header beginnt */
 }
