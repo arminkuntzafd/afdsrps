@@ -21,7 +21,7 @@ nav {
     padding: 10px 0;
     text-align: center;
     position: fixed;
-    top: 60px;  /* Direkt unter dem Header */
+    top: 80px;  /* Hier anpassen, um es unter dem Header zu platzieren */
     left: 0;
     width: 100%;
     z-index: 999;  /* Sicherstellen, dass das Menü unter dem Header bleibt */
