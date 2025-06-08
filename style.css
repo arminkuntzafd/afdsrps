@@ -91,4 +91,5 @@ footer {
 /* Abstand nach oben für den Content */
 body {
     margin-top: 140px;  /* Damit der Inhalt nicht unter dem Header/Nav versteckt wird */
+    padding-top: 60px;  /* Damit der Content nach dem Header beginnt */
 }
