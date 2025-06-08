@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="landessatzung der AfD-Fraktion im Stadtrat Pirmasens">
+    <titleLlandessatzung - AfD Fraktion Pirmasens</title>
+    <link rel="stylesheet" href="style.css"> <!-- Dein Stylesheet -->
+</head>
+<body>
+
+    <!-- Der Container für den Header und Nav -->
+    <div id="header-footer-container"></div>
+
+    <!-- Hauptinhalt -->
+    <main>
+        <section>
+            <!-- Das Iframe, um die Kreissatzung als PDF anzuzeigen -->
+            <iframe src="Satzung_Land.pdf" width="100%" height="800px" style="border: none;">
+                Ihr Browser unterstützt keine iframes oder PDFs.
+            </iframe>
+        </section>
+
+        <!-- Alternativer Download-Link für die PDF -->
+        <section>
+            <p><a href="Satzung_Land.pdf" target="_blank">Landessatzung als PDF herunterladen</a></p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 AfD-Fraktion im Stadtrat Pirmasens</p>
+    </footer>
+
+    <!-- JavaScript zum Laden des Headers und Navigationsmenüs -->
+    <script>
+        // Funktion, um Header und Navigation dynamisch zu laden
+        function loadContent() {
+            // Header laden
+            fetch('header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("header-footer-container").innerHTML = data;
+                    // Danach das Navigation-Menü laden
+                    return fetch('nav.html');
+                })
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("header-footer-container").innerHTML += data;
+                })
+                .catch(error => console.error('Fehler beim Laden des Headers und Menüs:', error));
+        }
+
+        // Inhalt beim Laden der Seite einfügen
+        window.onload = loadContent;
+    </script>
+
+</body>
+</html>
