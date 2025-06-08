@@ -25,15 +25,9 @@ header img {
 }
 
 /* Titel und Untertitel im Header */
-header h1 {
+header h1, header p {
     margin: 0;
     padding: 0;
-}
-
-header p {
-    margin: 0;
-    padding: 0;
-    font-size: 1.2em;  /* Optional: Du kannst die Schriftgröße des Untertitels hier anpassen */
 }
 
 /* Styling für das Nav-Menü */
@@ -42,7 +36,7 @@ nav {
     padding: 10px 0;
     text-align: center;
     position: fixed;
-    top: 100px;  /* Das Nav-Menü startet direkt unter dem Header */
+    top: 80px;  /* Das Nav-Menü startet direkt unter dem Header */
     left: 0;
     width: 100%;
     z-index: 999;  /* Nav bleibt unter dem Header */
@@ -97,20 +91,26 @@ nav a:hover {
 /* Abstand für den Content */
 body {
     margin: 0;
-    padding-top: 130px;  /* Platz für den Header und das Nav-Menü */
+    padding: 0;  /* Entferne alle Ränder und Abstände für body */
+    font-family: 'Roboto', sans-serif;
 }
 
-/* Sicherstellen, dass der Inhalt nicht von Header und Nav überlappt wird */
+/* Hauptinhalt Bereich */
 main {
     padding-top: 20px;  /* Padding für den Contentbereich */
 }
 
-/* Globale Schriftart */
-* {
-    font-family: 'Roboto', sans-serif !important;
+/* Das Iframe */
+iframe {
+    display: block;  /* Stellt sicher, dass das iframe als Block-Level-Element angezeigt wird */
+    margin: 0;  /* Kein Abstand */
+    padding: 0;  /* Kein Innenabstand */
+    border: none;  /* Kein Rahmen */
+    width: 100%;
+    height: 800px;
 }
 
-/* Footer */
+/* Sicherstellen, dass keine zusätzlichen Ränder oder Abstände den Footer beeinflussen */
 footer {
     background-color: #002147;
     color: white;
