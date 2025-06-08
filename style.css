@@ -8,7 +8,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1000;  /* Um sicherzustellen, dass der Header immer oben bleibt */
+    z-index: 1000;  /* Sicherstellen, dass der Header immer oben bleibt */
 }
 
 header h1, header p {
@@ -21,7 +21,7 @@ nav {
     padding: 10px 0;
     text-align: center;
     position: fixed;
-    top: 80px;  /* Hier anpassen, um es unter dem Header zu platzieren */
+    top: 80px;  /* Positioniert das Nav-Menü unter dem Header */
     left: 0;
     width: 100%;
     z-index: 999;  /* Sicherstellen, dass das Menü unter dem Header bleibt */
@@ -37,11 +37,6 @@ nav a:hover {
     text-decoration: underline;
 }
 
-/* Abstand nach oben für den Content */
-body {
-    margin-top: 140px;  /* Damit der Inhalt nicht unter dem Header/Nav versteckt wird */
-}
-
 /* Dropdown Styling */
 .dropdown {
     position: relative;
@@ -52,8 +47,11 @@ body {
     display: none;
     position: absolute;
     background-color: #444;
-    min-width: 160px;
+    min-width: 160px;  /* Mindestbreite des Dropdowns */
     z-index: 1;
+    width: auto;  /* Die Breite passt sich automatisch an den Inhalt an */
+    white-space: nowrap;  /* Verhindert Umbruch des Textes */
+    padding: 5px 10px;
 }
 
 .dropdown-content a {
@@ -62,6 +60,7 @@ body {
     display: block;
     text-align: left;
     text-decoration: none;
+    white-space: nowrap;  /* Verhindert Umbruch des Textes */
 }
 
 .dropdown-content a:hover {
@@ -81,4 +80,9 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
+}
+
+/* Abstand nach oben für den Content */
+body {
+    margin-top: 140px;  /* Damit der Inhalt nicht unter dem Header/Nav versteckt wird */
 }
