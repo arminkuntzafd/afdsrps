@@ -53,6 +53,53 @@ nav a {
 nav a:hover {
     text-decoration: underline;
 }
+/* Basisstil für das Menü */
+ul.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: #333;
+}
+
+ul.menu > li {
+  position: relative;
+  display: inline-block;
+}
+
+ul.menu > li > a {
+  color: white;
+  padding: 10px 20px;
+  display: block;
+  text-decoration: none;
+}
+
+/* Standardmäßig verstecken wir alle Untermenüs */
+ul.menu li ul {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background-color: #444;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/* Anzeigen des Untermenüs beim Hover über den übergeordneten Menüpunkt */
+ul.menu li:hover > ul {
+  display: block;
+}
+
+ul.menu li ul li a {
+  padding: 10px;
+  color: white;
+  display: block;
+  text-decoration: none;
+}
+
+ul.menu li ul li a:hover {
+  background-color: #555;
+}
 
 /* Dropdown-Menü */
 .dropdown {
