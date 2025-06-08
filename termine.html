@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Termine der AfD-Fraktion Pirmasens</title>
+    <link rel="stylesheet" href="style.css" /> <!-- Stylesheet einbinden -->
+
+    <style>
+        /* Grundlegendes Layout */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Hauptinhalt */
+        main {
+            padding: 20px;
+            padding-bottom: 50px; /* Platz für den Footer */
+        }
+
+        /* Footer fixiert am unteren Rand */
+        footer {
+            background-color: #002147;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            left: 0;
+        }
+
+        /* Iframe Style für den Kalender */
+        iframe {
+            width: 100%;
+            height: 800px; /* Höhe des eingebetteten Kalenders */
+            border: none;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER wird über JS eingebunden -->
+    <div id="header-container"></div>
+    <script>
+        fetch('header.html')  <!-- Hier wird die header.html eingebunden -->
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+            });
+    </script>
+
+    <!-- NAVIGATION wird über JS eingebunden -->
+    <div id="nav-container"></div>
+    <script>
+        fetch('nav.html')  <!-- Hier wird die nav.html eingebunden -->
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('nav-container').innerHTML = data;
+            });
+    </script>
+
+    <!-- Hauptinhalt der Seite -->
+    <main>
+                <!-- Iframe für Tockify Kalender -->
+        <iframe src="https://tockify.com/afdstadtratps/monthly" title="AfD Stadtrat Pirmasens Termine"></iframe>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2025 AfD-Fraktion Stadtrat Pirmasens</p>
+    </footer>
+
+</body>
+</html>
