@@ -9,10 +9,13 @@ header {
     left: 0;
     width: 100%;
     z-index: 1000;  /* Sicherstellen, dass der Header immer oben bleibt */
+    margin: 0;  /* Verhindert mögliche Ränder */
 }
 
+/* Entferne jegliche Abstände (Margin und Padding) */
 header h1, header p {
     margin: 0;
+    padding: 0;
 }
 
 /* Styling für das Nav-Menü */
@@ -21,12 +24,15 @@ nav {
     padding: 10px 0;
     text-align: center;
     position: fixed;
-    top: 80px;  /* Positioniert das Nav-Menü unter dem Header */
+    top: 60px;  /* Positioniert das Nav-Menü direkt unter dem Header */
     left: 0;
     width: 100%;
     z-index: 999;  /* Sicherstellen, dass das Menü unter dem Header bleibt */
+    margin: 0;  /* Entfernt Ränder und beseitigt die Lücke */
+    padding-top: 0;  /* Kein zusätzliches Padding oben */
 }
 
+/* Nav-Links */
 nav a {
     color: white;
     margin: 0 15px;
@@ -37,7 +43,7 @@ nav a:hover {
     text-decoration: underline;
 }
 
-/* Dropdown Styling */
+/* Dropdown-Menü */
 .dropdown {
     position: relative;
     display: inline-block;
