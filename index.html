@@ -11,11 +11,7 @@
 </head>
 <body>
 
-    <!-- HEADER -->
-    <header>
-        <h1>AfD-Fraktion im Stadtrat Pirmasens</h1>
-        <p>Wir setzen uns für Ihre Interessen ein!</p>
-    </header>
+   <div id="header-container"></div> 
 
     <!-- NAVIGATION wird automatisch geladen -->
     <div id="nav-container"></div>
@@ -45,6 +41,13 @@
             })
             .catch(error => console.error('Fehler beim Laden der Navigation:', error));
     </script>
-
+<script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('nav-container').innerHTML = data;
+            })
+            .catch(error => console.error('Fehler beim Laden der Navigation:', error));
+    </script>
 </body>
 </html>
