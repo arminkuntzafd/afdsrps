@@ -11,6 +11,12 @@ header {
     z-index: 1000;  /* Header bleibt immer oben */
     margin: 0;
 }
+header img {
+    height: 50px;  /* Logo-Höhe */
+    margin-left: 20px;  /* Abstand nach links */
+}
+
+
 
 /* Entferne jegliche Abstände (Margin und Padding) */
 header h1, header p {
