@@ -42,7 +42,7 @@ nav {
     padding: 10px 0;
     text-align: center;
     position: fixed;
-    top: 80px;  /* Das Nav-Menü startet direkt unter dem Header */
+    top: 100px;  /* Das Nav-Menü startet direkt unter dem Header */
     left: 0;
     width: 100%;
     z-index: 999;  /* Nav bleibt unter dem Header */
