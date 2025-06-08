@@ -91,7 +91,7 @@ nav a:hover {
 /* Abstand für den Content */
 body {
     margin: 0;
-    padding-top: 140px;  /* Hier setzen wir das Padding, um Platz für Header und Nav zu schaffen */
+    padding-top: 120px;  /* Hier setzen wir das Padding, um Platz für Header und Nav zu schaffen */
     font-family: 'Roboto', sans-serif;
 }
 
