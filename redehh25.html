@@ -1,46 +1,34 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Reden – AfD-Fraktion Pirmasens</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Haushaltsrede 2025</title>
+    <link rel="stylesheet" href="style.css" /> <!-- Stylesheet einbinden -->
 </head>
 <body>
 
-<!-- Header -->
-<header>
-    <h1>AfD-Fraktion im Stadtrat Pirmasens</h1>
-    <p>Wir setzen uns für Ihre Interessen ein!</p>
-</header>
+    <!-- HEADER + NAV wird über JS oder manuell eingebunden -->
+    <div id="nav-container"></div>
+    <script>
+        fetch('nav.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('nav-container').innerHTML = data;
+            });
+    </script>
 
-<!-- Navigation -->
-<nav>
-    <a href="home.html">Start</a>
-    <a href="themen.html">Themen</a>
-    <a href="team.html">Unser Team</a>
-    <a href="kontakt.html">Kontakt</a>
-    <a href="termine.html">Termine</a>
-    <a href="reden.html">Reden</a>
-</nav>
+    <main>
+        <h2>Haushaltsrede 2025</h2>
+        <p>Lesen Sie die vollständige Haushaltsrede hier:</p>
 
-<!-- Main Content -->
-<main>
-  <section id="reden">
-    <h2>Haushaltsrede 2025</h2>
-    <p>Hier sehen Sie die vollständige Rede in HTML:</p>
+        <!-- Hier wird die PDF der Rede eingebunden -->
+        <iframe src="PSHH25.pdf" width="100%" height="800px" title="Haushaltsrede 2025"></iframe>
+    </main>
 
-    <!-- Iframe zur Darstellung der Rede -->
-    <iframe src="PSHH25.pdf" width="100%" height="1500px" style="border: none;"></iframe>
-
-    <p><a href="PSHH25.pdf" target="_blank">Rede in neuem Fenster öffnen</a></p>
-  </section>
-</main>
-
-<!-- Footer -->
-<footer>
-    <p>&copy; 2025 AfD-Fraktion Stadtrat Pirmasens</p>
-</footer>
+    <footer>
+        <p>&copy; 2025 AfD-Fraktion Stadtrat Pirmasens</p>
+    </footer>
 
 </body>
 </html>
