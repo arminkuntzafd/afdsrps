@@ -96,7 +96,9 @@ body {
 main {
     padding-top: 20px;  /* Padding für den Contentbereich */
 }
-
+* {
+    font-family: 'Roboto', sans-serif !important;
+}
 /* Footer */
 footer {
     background-color: #002147;
