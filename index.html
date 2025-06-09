@@ -45,7 +45,7 @@
         fetch('header.html')
             .then(response => response.text())
             .then(data => {
-                document.getElementById('nav-container').innerHTML = data;
+                document.getElementById('header-container').innerHTML = data;
             })
             .catch(error => console.error('Fehler beim Laden der Navigation:', error));
     </script>
