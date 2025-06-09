@@ -9,7 +9,6 @@ header {
     left: 0;
     width: 100%;
     z-index: 1000;
-    margin: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -40,7 +39,6 @@ nav {
     left: 0;
     width: 100%;
     z-index: 999;  /* Nav bleibt unter dem Header */
-    margin: 0;
 }
 
 /* Nav-Links */
@@ -53,55 +51,60 @@ nav a {
 nav a:hover {
     text-decoration: underline;
 }
+
 /* Basisstil für das Menü */
 ul.menu {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  background-color: #333;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #333;
 }
 
+/* Hauptmenüpunkte (innerhalb des ul) */
 ul.menu > li {
-  position: relative;
-  display: inline-block;
+    position: relative;
+    display: inline-block;
 }
 
+/* Styling der Hauptmenüpunkte */
 ul.menu > li > a {
-  color: white;
-  padding: 10px 20px;
-  display: block;
-  text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    display: block;
+    text-decoration: none;
 }
 
 /* Standardmäßig verstecken wir alle Untermenüs */
 ul.menu li ul {
-  display: none;
-  position: absolute;
-  left: 0;
-  top: 100%;
-  background-color: #444;
-  padding: 0;
-  margin: 0;
-  list-style: none;
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: #444;
+    padding: 0;
+    margin: 0;
+    list-style: none;
 }
 
 /* Anzeigen des Untermenüs beim Hover über den übergeordneten Menüpunkt */
 ul.menu li:hover > ul {
-  display: block;
+    display: block;
 }
 
+/* Styling für Links im Untermenü */
 ul.menu li ul li a {
-  padding: 10px;
-  color: white;
-  display: block;
-  text-decoration: none;
+    padding: 10px;
+    color: white;
+    display: block;
+    text-decoration: none;
 }
 
+/* Hover-Effekt für Links im Untermenü */
 ul.menu li ul li a:hover {
-  background-color: #555;
+    background-color: #555;
 }
 
-/* Dropdown-Menü */
+/* Dropdown-Menü für verschachtelte Untermenüs */
 .dropdown {
     position: relative;
     display: inline-block;
@@ -109,53 +112,53 @@ ul.menu li ul li a:hover {
 
 /* Standard Dropdown */
 .dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #fff;
-  min-width: 200px;
-  z-index: 1;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-}
-dropdown:hover > .dropdown-content {
-  display: block;
-}
-
-/* Menüstruktur für verschachtelte Untermenüs */
-.dropdown-content .has-submenu {
-  position: relative;
-}
-
-/* Seitliches Submenü */
-.sub-dropdown {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 100%; /* erscheint rechts vom Hauptpunkt */
-  background-color: #fff;
-  min-width: 200px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-  z-index: 2;
-}
-
-/* Zeige Sub-Dropdown bei Hover über Elternpunkt */
-.has-submenu:hover .sub-dropdown {
-  display: block;
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 200px;
+    z-index: 1;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    padding: 0;
+    margin: 0;
 }
 
 .dropdown-content a {
-    color: white;
+    color: black;
     padding: 10px;
     display: block;
-    text-align: left;
     text-decoration: none;
     white-space: nowrap;
 }
 
+/* Hover-Effekt für Dropdown-Links */
 .dropdown-content a:hover {
     background-color: #555;
 }
 
-.dropdown:hover .dropdown-content {
+/* Anzeigen des Dropdown-Menüs beim Hover über den übergeordneten Menüpunkt */
+.dropdown:hover > .dropdown-content {
+    display: block;
+}
+
+/* Menüstruktur für verschachtelte Untermenüs */
+.dropdown-content .has-submenu {
+    position: relative;
+}
+
+/* Seitliches Submenü */
+.sub-dropdown {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;  /* Das Submenü erscheint jetzt rechts vom Hauptmenüpunkt */
+    background-color: #fff;
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 2;
+}
+
+/* Zeige Sub-Dropdown bei Hover über Elternpunkt */
+.has-submenu:hover .sub-dropdown {
     display: block;
 }
 
