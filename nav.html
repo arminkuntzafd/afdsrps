@@ -1,44 +1,48 @@
 <nav>
-  <a href="index.html">Start</a>
+  <ul class="menu">
+    <li><a href="index.html">Start</a></li>
 
-  <div class="dropdown">
-    <a href="javascript:void(0)">Grundlagen</a>
-    <div class="dropdown-content">
-      <a href="kreissatzung.html">Kreissatzung</a>
-      <a href="landessatzung.html">Landessatzung</a>
-      <a href="bundessatzung.html">Bundessatzung</a>
-      <a href="afdbtwp.html">Bundestagsprogramm</a>
-    </div>
-  </div>
+    <li class="dropdown">
+      <a href="#">Grundlagen</a>
+      <ul class="dropdown-content">
+        <li><a href="kreissatzung.html">Kreissatzung</a></li>
+        <li><a href="landessatzung.html">Landessatzung</a></li>
+        <li><a href="bundessatzung.html">Bundessatzung</a></li>
+        <li><a href="afdbtwp.html">Bundestagsprogramm</a></li>
+      </ul>
+    </li>
 
-  <a href="team.html">Unser Team</a>
-  <a href="kontakt.html">Kontakt</a>
+    <li><a href="team.html">Unser Team</a></li>
+    <li><a href="kontakt.html">Kontakt</a></li>
 
-  <div class="dropdown">
-    <a href="javascript:void(0)">Termine</a>
-    <div class="dropdown-content">
-      <a href="termine.html">Stadtratsfraktion</a>
-      <a href="https://alternative-rlp.de/veranstaltungenafdrlp">Landesverband</a>
-      <a href="https://rip.stadt-pirmasens.de/bi/info.asp">Bürgerinfo</a>
-    </div>
-  </div>
+    <li class="dropdown">
+      <a href="#">Termine</a>
+      <ul class="dropdown-content">
+        <li><a href="termine.html">Stadtratsfraktion</a></li>
+        <li><a href="https://alternative-rlp.de/veranstaltungenafdrlp">Landesverband</a></li>
+        <li><a href="https://rip.stadt-pirmasens.de/bi/info.asp">Bürgerinfo</a></li>
+      </ul>
+    </li>
 
-  <div class="dropdown">
-    <a href="javascript:void(0)">Reden</a>
-    <div class="dropdown-content">
-      <a href="redehh25.html">Haushaltsrede 2025</a>
-    </div>
-  </div>
+    <li class="dropdown">
+      <a href="#">Reden</a>
+      <ul class="dropdown-content">
+        <li><a href="redehh25.html">Haushaltsrede 2025</a></li>
+      </ul>
+    </li>
 
-  <div class="dropdown">
-    <a href="javascript:void(0)">Anfragen</a>
-    <div class="dropdown-content">
-      <a href="20240822ein.html">20240822 Einschulungen</a>
-      
-      <!-- Submenü für 20240822ein.html -->
-      <div class="sub-menu">
-        <a href="20240822eina.html">Antwort (Eina)</a>
-      </div>
-    </div>
-  </div>
+    <!-- Hauptpunkt "Anfragen" -->
+    <li class="dropdown">
+      <a href="#">Anfragen</a>
+      <ul class="dropdown-content">
+        <li class="has-submenu">
+          <a href="20240822ein.html">20240822 Einschulungen</a>
+          <!-- Untermenü von "20240822 Einschulungen" -->
+          <ul class="sub-dropdown">
+            <li><a href="20240822eina.html">Antwort (Eina)</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
 </nav>
