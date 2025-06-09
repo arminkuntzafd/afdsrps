@@ -107,15 +107,39 @@ ul.menu li ul li a:hover {
     display: inline-block;
 }
 
+/* Standard Dropdown */
 .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #444;
-    min-width: 160px;
-    z-index: 1;
-    width: auto;
-    white-space: nowrap;
-    padding: 5px 10px;
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 200px;
+  z-index: 1;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+dropdown:hover > .dropdown-content {
+  display: block;
+}
+
+/* Menüstruktur für verschachtelte Untermenüs */
+.dropdown-content .has-submenu {
+  position: relative;
+}
+
+/* Seitliches Submenü */
+.sub-dropdown {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%; /* erscheint rechts vom Hauptpunkt */
+  background-color: #fff;
+  min-width: 200px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 2;
+}
+
+/* Zeige Sub-Dropdown bei Hover über Elternpunkt */
+.has-submenu:hover .sub-dropdown {
+  display: block;
 }
 
 .dropdown-content a {
