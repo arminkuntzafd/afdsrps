@@ -15,24 +15,3 @@
 
 
 
-<!-- JavaScript für Dropdown-Menü -->
-<script>
-  // Schließt das Dropdown-Menü, wenn außerhalb des Menüs geklickt wird
-  window.onclick = function(event) {
-    if (!event.target.matches('.dropbtn')) {
-      var dropdowns = document.getElementsByClassName("dropdown-content");
-      for (var i = 0; i < dropdowns.length; i++) {
-        var openDropdown = dropdowns[i];
-        if (openDropdown.style.display === "block") {
-          openDropdown.style.display = "none";
-        }
-      }
-    }
-  }
-
-  // Öffnet und schließt das Dropdown-Menü beim Klicken auf „Reden“
-  document.querySelector('.dropbtn').addEventListener('click', function() {
-    var dropdown = document.querySelector('.dropdown-content');
-    dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
-  });
-</script>
